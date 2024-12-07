@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h2 class="text-center my-4">Upcoming Events</h2>
+    <div class="container">
+        <div class="row g-4">
+            {% for event in events %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <!-- Event Image -->
+                <img src="{% static event.image_path %}" class="card-img-top" alt="{{ event.name }}">
+
+                <div class="card-body text-center">
+                    <!-- Event Name -->
+                    <h5 class="card-title">
+                        <a href="{% url 'event_detail' event.id %}">{{ event.name }}</a>
+                    </h5>
+
+                    <!-- Event Description -->
+                    <p class="card-text">{{ event.description|truncatechars:100 }}</p>
+
+                    <!-- Event Date -->
+                    <p><i class="fas fa-calendar-day"></i><strong>Date:</strong> {{ event.date }}</p>
+
+                    <!-- Book Button -->
+                    <a href="{% url 'book_event' event.id %}" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+
+

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to EventHub{% endblock %}
+
+{% block content %}
+<!-- Import Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Link to Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Hero Section -->
+<div class="hero">
+    <h1>Welcome to EventHub</h1>
+    <p>Your go-to platform for discovering and booking amazing events near you.</p>
+    <a href="{% url 'event_list' %}" class="btn">Discover Upcoming Events</a>
+</div>
+
+<!-- Features Section -->
+<div class="features">
+    <div class="container">
+        <h2>Why Choose EventHub?</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <i class="fas fa-search fa-2x mb-3 text-primary"></i>
+                    <h5 class="card-title">Explore Events</h5>
+                    <p>Discover a wide range of events, from concerts to workshops, all in one place.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <i class="fas fa-calendar-check  card-icon"></i>
+                    <h5 class="card-title">Easy Booking</h5>
+                    <p>Effortlessly book your spot and receive instant confirmation via email.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <i class="fas fa-bell fa-2x mb-3 text-warning"></i>
+                    <h5 class="card-title">Stay Connected</h5>
+                    <p>Get notified about upcoming events and never miss out on the fun.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call-to-Action Section -->
+<div class="text-center my-5">
+    <a href="{% url 'event_list' %}" class="btn-view-events">View All Events</a>
+</div>
+{% endblock %}

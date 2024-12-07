@@ -1,0 +1,227 @@
+/* General Styles */
+body {
+    background-color: #fdf6ec; /* Light nude */
+    font-family: 'Poppins', sans-serif; /* Google Font for modern look */
+    color: #5d4037; /* Chocolate brown */
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #FF6F61; /* Coral Red - Primary color */
+    color: #FFFFFF;
+}
+
+.navbar-brand, .nav-link {
+    font-family: 'Lora', serif; /* Elegant serif font for branding */
+    font-size: 1.2rem;
+    color: #FFFFFF !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFD700 !important; /* Gold accent for hover effect */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #FF6F61, #6EC1E4); /* Coral Red to Light Blue */
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    background-color: #FFD700; /* Gold Button */
+    color: #5d4037; /* Chocolate brown for contrast */
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #FF6F61; /* Coral Red */
+    color: #FFFFFF;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.features h2 {
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #5d4037;
+}
+
+.features .card {
+    border: none;
+    transition: all 0.3s ease;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.features .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.features .card-title {
+    font-family: 'Lora', serif;
+    color: #FF6F61; /* Coral Red */
+}
+
+.features .card-text {
+    color: #7d5a50; /* Subtle brown */
+    font-size: 0.9rem;
+}
+
+.features .card-icon {
+    font-size: 3rem;
+    color: #FFD700; /* Gold */
+    margin-bottom: 15px;
+}
+
+.btn-view-events {
+    background-color: #FF6F61; /* Coral Red */
+    color: white;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-view-events:hover {
+    background-color: #6EC1E4; /* Light Blue */
+    text-decoration: none;
+}
+
+/* Cards (Event List) */
+.card {
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+    font-family: 'Lora', serif;
+    color: #FF6F61; /* Coral Red */
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #7d5a50; /* Subtle brown */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #FF6F61; /* Coral Red */
+    border: none;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #FFD700; /* Gold */
+    color: #5d4037;
+}
+
+/*icons*/
+.card-icon {
+    font-size: 3rem;
+    color: #FFD700; /* Gold color for emphasis */
+    margin-bottom: 15px;
+}
+
+.card-title i, .card-text i {
+    color: #FF6F61; /* Coral Red for inline icons */
+    margin-right: 5px;
+}
+
+.btn i {
+    margin-right: 5px;
+}
+.card-body i {
+    color: #FF6F61; /* Coral red for emphasis */
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2rem;
+}
+
+.card-body p {
+    margin: 10px 0;
+}
+
+.card-header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-body i {
+    color: #FF6F61; /* Coral red for emphasis */
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2rem;
+}
+
+.card-body p {
+    margin: 10px 0;
+}
+
+button.btn-primary {
+    background-color: #FF6F61;
+    border: none;
+}
+
+button.btn-primary:hover {
+    background-color: #FFD700;
+    color: #fff;
+}
+
+.card-header {
+    background-color: #FF6F61; /* Match the icon coral red color */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-header h5 {
+    margin: 0; /* Ensure proper spacing for header text */
+}
+
+/* Footer */
+footer {
+    font-family: 'Lora', serif;
+    color: #FFFFFF;
+    background-color: #6EC1E4; /* Light Blue */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}

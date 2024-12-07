@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-4">
+    <!-- Event Details -->
+    <h2 class="text-center">{{ event.name }}</h2>
+    <div class="card shadow-sm my-4">
+        <!-- Event Image -->
+                <img src="{% static event.image_path %}" class="card-img-top" alt="{{ event.name }}">
+{#        {% if event.image %}#}
+{#            <img src="{{ event.image.url }}" class="card-img-top" alt="{{ event.name }}">#}
+{#        {% endif %}#}
+       <div class="card-body text-center">
+    <p class="card-text">
+        <i class="fas fa-info-circle"></i> {{ event.description }}
+    </p>
+    <p>
+        <i class="fas fa-calendar-alt"></i> <strong>Date: </strong>{{ event.date }}
+    </p>
+    <p>
+        <i class="fas fa-map-marker-alt"></i> <strong>Location: </strong>{{ event.location }}
+    </p>
+    <p>
+        <i class="fas fa-ticket-alt"></i> <strong>Total Tickets: </strong>{{ event.total_tickets }}
+    </p>
+    <p>
+        <i class="fas fa-user-check"></i> <strong>Tickets Booked: </strong>{{ total_booked }}
+    </p>
+    <p>
+        <i class="fas fa-ticket"></i> <strong>Available Tickets: </strong>{{ available_tickets }}
+    </p>
+</div>
+
+    </div>
+
+    <!-- Booking Form -->
+    <h3 class="text-center">Book Your Tickets</h3>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post" action="{% url 'book_event' event.id %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input 
+                        type="number" 
+                        id="quantity" 
+                        name="quantity" 
+                        min="1" 
+                        max="{{ max_quantity}}" 
+                        value="1" 
+                        class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Book Now</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
